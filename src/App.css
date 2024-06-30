@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #2a2525;
+  color: #fff;
+
+
+  font-size: 20px;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  padding: 30px;
+}
+
+.App > div {
+  margin-right: 50px;
+}
+
+.wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 30px;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+}
