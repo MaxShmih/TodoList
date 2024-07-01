@@ -36,6 +36,25 @@ html, body {
   justify-content: center;
   flex-direction: column;
   margin-right: 30px;
-  /* min-height: 100vh; */
-  /* min-width: 100vw; */
+}
+
+.error {
+  border: 1px solid #ff0000;
+}
+
+.error_message {
+  color: #ff0000;
+}
+
+.active_filter {
+  background-color: aquamarine;
+}
+
+.done_task {
+  opacity: 0.5;
+}
+
+.head {
+  display: flex;
+  
 }
