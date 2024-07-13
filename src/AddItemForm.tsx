@@ -1,3 +1,5 @@
+import { Add, Delete } from "@mui/icons-material";
+import { Button, Fab, IconButton, TextField } from "@mui/material";
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 
 type AddItemFormPropsType = {
@@ -18,7 +20,7 @@ export function AddItemForm(props: AddItemFormPropsType) {
 			if (newTaskTitle.trim() !== '') {
 				props.addItem(newTaskTitle)
 				setNewTaskTitle("");
-			} else { setError('Title is required') }
+			} else { setError('Title is empty') }
 		}
 	}
 
@@ -34,14 +36,16 @@ export function AddItemForm(props: AddItemFormPropsType) {
 
 	return (
 		<div>
-			<input
+			<TextField id="standard-basic" label="Type your plan:" variant="standard"
 				value={newTaskTitle}
 				onChange={onNewTaskTitleChangeHandler}
 				onKeyUp={onCreateNewTaskKeyPressHandler}
-				className={error ? 'error' : ''}
+				error={!!error}
+				helperText={error}
 			/>
-			<button onClick={addTask}>+</button>
-			{error && <div className="error_message">{error}</div>}
+			<Fab size="small" color="primary" aria-label="add" onClick={addTask}>
+				<Add />
+			</Fab>
 		</div>
 	)
 }

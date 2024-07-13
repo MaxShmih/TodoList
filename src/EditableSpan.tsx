@@ -1,3 +1,5 @@
+import { Edit } from "@mui/icons-material";
+import { Fab, TextField } from "@mui/material";
 import { ChangeEvent, useState } from "react";
 
 type EditableSpanPropsType = {
@@ -5,7 +7,7 @@ type EditableSpanPropsType = {
 	onChange: (newValue: string) => void
 }
 export function EditableSpan(props: EditableSpanPropsType) {
-	const [editMode, setEditMode] = useState(false); 
+	const [editMode, setEditMode] = useState(false);
 	let [title, setTitle] = useState(props.title);
 
 	const onChangeTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +25,7 @@ export function EditableSpan(props: EditableSpanPropsType) {
 	}
 
 	return editMode ?
-	  <input value={title} onChange={onChangeTitleHandler} onBlur={activateViewMode} autoFocus />
-	: <span onDoubleClick={activateEditMode}>{props.title}</span>
-	
+		<TextField value={title} onChange={onChangeTitleHandler} onBlur={activateViewMode} autoFocus />
+		: <span onDoubleClick={activateEditMode}>{props.title}</span>
+
 }
