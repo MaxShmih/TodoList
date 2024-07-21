@@ -1,6 +1,6 @@
-import { Add, Delete } from "@mui/icons-material";
-import { Button, Fab, IconButton, TextField } from "@mui/material";
+import { SvgIcon, TextField } from "@mui/material";
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 
 type AddItemFormPropsType = {
 	addItem: (title: string) => void
@@ -35,17 +35,17 @@ export function AddItemForm(props: AddItemFormPropsType) {
 	}
 
 	return (
-		<div>
-			<TextField id="standard-basic" label="Type your plan:" variant="standard"
+		<div className="input_sett">
+			<TextField id="standard-basic" label="Type your goal:" variant="standard"
 				value={newTaskTitle}
 				onChange={onNewTaskTitleChangeHandler}
 				onKeyUp={onCreateNewTaskKeyPressHandler}
 				error={!!error}
 				helperText={error}
 			/>
-			<Fab size="small" color="primary" aria-label="add" onClick={addTask}>
-				<Add />
-			</Fab>
+			<button className="addBtn" onClick={addTask}>
+				<AddCircleOutlinedIcon />
+			</button>
 		</div>
 	)
 }

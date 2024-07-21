@@ -4,60 +4,42 @@
   box-sizing: border-box;
 }
 
-
-/* 
-
-html, body {
-  background-color: #2a2525;
-  color: #fff;
-
-
-  font-size: 20px;
-}
-
-#root {
+.main_input {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  min-width: 100%;
-  min-height: 100vh;
+  margin: 20px 0px;
 }
 
-.App {
+.input_sett {
   display: flex;
-  padding: 30px;
+  align-items: center;
+  padding: 10px;
 }
 
-.App > div {
-  margin-right: 50px;
+.addBtn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
 }
 
 .wrapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 30px;
-}
-
-.error {
-  border: 1px solid #ff0000;
-}
-
-.error_message {
-  color: #ff0000;
-}
-
-.active_filter {
-  background-color: aquamarine;
-}
-
-.done_task {
-  opacity: 0.5;
+  padding: 10px;
 }
 
 .head {
   display: flex;
-  
-} */
+  justify-content: start;
+  align-items: center;
+}
+
+.todoList {
+  list-style: none;
+  font-style: italic;
+  font-size: 20px;
+}

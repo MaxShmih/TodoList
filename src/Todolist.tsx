@@ -54,9 +54,9 @@ const Todolist = (props: PropsType) => {
 				</IconButton>
 			</div>
 			<AddItemForm
-				addItem={addTask}
+				addItem={addTask} 
 			/>
-			<ul>
+			<ul className="todoList">
 				{
 					props.task.map((t) => {
 						const onChangeInputCheckerHandler = (e: ChangeEvent<HTMLInputElement>) => {
